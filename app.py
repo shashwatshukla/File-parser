@@ -4,7 +4,7 @@ from st_aggrid import GridOptionsBuilder, AgGrid, GridUpdateMode, DataReturnMode
 import io
 
 st.set_page_config(page_title='Job Master', layout='wide')
-
+st.info('This app over comes limitation of excel pivot where the user cannot change data from pivot table directly. \n Excel file is read in pandas and written in aggrid')
 def to_excel(df) -> bytes:
     output = io.BytesIO()
     writer = pd.ExcelWriter(output, engine="xlsxwriter")

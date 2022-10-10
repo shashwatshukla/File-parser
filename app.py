@@ -21,7 +21,7 @@ if lst is not None:
     sheets=st.selectbox('Select sheet',options=list(df1.keys()))
     df=df1[sheets]
     #st.write(df.columns)
-    col_selector=st.multiselect('select columns',options=list(df.columns),default=list(df.columns))
+    col_selector=st.multiselect('select columns',options=list(df.columns),default=list(df.columns)[0])
     df=df[col_selector]
     gb = GridOptionsBuilder.from_dataframe(df)
     gb.configure_pagination(paginationAutoPageSize=True, paginationPageSize=10)

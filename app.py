@@ -24,7 +24,7 @@ if lst is not None:
     col_selector=st.multiselect('select columns',options=list(df.columns),default=list(df.columns)[0])
     df=df[col_selector]
     gb = GridOptionsBuilder.from_dataframe(df)
-    gb.configure_pagination(paginationAutoPageSize=True, paginationPageSize=10)
+    gb.configure_pagination(paginationAutoPageSize=True, paginationPageSize=20)
     gb.configure_side_bar()
     gb.configure_default_column(groupable=True, value=True, enableRowGroup=True, aggFunc="sum", editable=True,autoHeight=True,wrapText=True)
     gridOptions = gb.build()
